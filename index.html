@@ -1,29 +1,769 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        p{
-    color: green;
-    font-size:16px;
-}
-    </style>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
 </head>
+
 <body>
-    
-    <h1 class="maincolor">Naman Singh</h1>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem odio esse veritatis alias error ea, fugit amet magnam quis laboriosam. Sit sequi nisi incidunt adipisci numquam eius eaque impedit voluptatibus?</p>
 
-    <p class="maincolor" style="color:red;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil soluta culpa ipsa impedit iusto reprehenderit, eaque deleniti minima pariatur qui!
+    <table id="searchtable" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>
+                    Email</th>
+                <th>Phone</th>
+                <th>State</th>
+                <th>Credentials</th>
+                <th>Patient Types
+                </th>
+                <th>Status</th>
+                <th>Classification
+                </th>
+                <th>Clients</th>
+                <th>Hire Date</th>
+            </tr>
+        </thead>
 
-    </p>
+        <tbody>
 
-    <p class="maincolor" id="cuatomfont">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iste! Vitae similique alias adipisci sapiente nihil minus accusamus tempore provident!
-    </p>
+            <tr>
+                <td>Melissa</td>
+                <td>Kimball</td>
+                <td> missyg1616@yahoo.com</td>
+                <td>(804) 386-6071</td>
+                <td>FL</td>
+                <td></td>
+                <td></td>
+                <td>Failed Assessment</td>
+                <td></td>
+                <td>MD Associates, Inc.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cheryl</td>
+                <td>Klatt</td>
+                <td> cheryl.a.klatt.civ@mail.mil</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td> Izabelle </td>
+                <td>Jean-Jacques</td>
+                <td> Izabelle Jean-Jacques11981@kiwi-tek.com</td>
+                <td>(561) 255-4247</td>
+                <td>FL</td>
+                <td>RHIA</td>
+                <td>Inpatient Coder</td>
+                <td>Applicant</td>
+                <td>W-2 Employee</td>
+                <td>North Shore Hospital, Good Samaritan Medical Center, HIM, KForce Parkview Medical Center, Palms West
+                    Hospital</td>
+                <td>2014-10-28</td>
+            </tr>
+            <tr>
+                <td> Mohan</td>
+                <td>Narayanan</td>
+                <td> MohanNarayanan11053@kiwi-tek.com</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Inpatient Coder</td>
+                <td>International - Active</td>
+                <td>1099</td>
+                <td>Omega</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Jennifer</td>
+                <td>Martinez</td>
+                <td>02350@msn.com</td>
+                <td>505-801-1280</td>
+                <td>NM</td>
+                <td>CCA, CPC</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>Inova Healthcare Systems, Health Care Coding And Consulting, Farmington Family Practice, San Juan
+                    Regional Medical Center</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Bonnie</td>
+                <td>Robinson</td>
+                <td>1badcoder@sbcglobal.net</td>
+                <td>(972) 951-5853</td>
+                <td>TX</td>
+                <td>CPC, CPC-I</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>1st Impression Medical Billing, Baylor Medical University Hospital, Thorek Hospital, Focused
+                    Healthcare Strategies</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tracey</td>
+                <td>Not Available</td>
+                <td>1cooldragonfly@att.net</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Barbara</td>
+                <td>Myers</td>
+                <td>1gabndmom@gmail.com</td>
+                <td>717-658-4548</td>
+                <td>PA</td>
+                <td>CPC</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>Summit Physicians Services / Wellspan Health</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Angelena</td>
+                <td>Arnold</td>
+                <td>2001arnoldfam@gmail.com</td>
+                <td>309-310-4368</td>
+                <td>IL</td>
+                <td>CPC</td>
+                <td></td>
+                <td>Failed Assessment</td>
+                <td></td>
+                <td>Advocate Medical Group</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Michelle</td>
+                <td>Hickman</td>
+                <td>2mhickman@gmail.com</td>
+                <td>918-740-6765</td>
+                <td>OK</td>
+                <td></td>
+                <td>Professional Fee</td>
+                <td>Quit</td>
+                <td></td>
+                <td>Cancer Treatments of America</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sheila</td>
+                <td>Moore</td>
+                <td>2tfruity0323@gmail.com</td>
+                <td>440-384-7251</td>
+                <td>OH</td>
+                <td>CCS, LPN</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>RI RCM, Oxford Health Information Management</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tammi</td>
+                <td>Haseltine</td>
+                <td>4tammih@gmail.com</td>
+                <td>434-610-6117</td>
+                <td>CA</td>
+                <td>CCA</td>
+                <td></td>
+                <td>Failed Assessment</td>
+                <td></td>
+                <td>Eisenhower Medical Center</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Joan</td>
+                <td>Hobbs</td>
+                <td>77aa@msn.com</td>
+                <td>612-791-1960</td>
+                <td>MN</td>
+                <td>CPC, RHIA</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>North Memorial Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Thompson</td>
+                <td>89ashes@gmail.com</td>
+                <td>573-489-2028</td>
+                <td>MO</td>
+                <td>CPC</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>University of MO. Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Aasem</td>
+                <td>Sulehria</td>
+                <td>a-sulehria@live.com</td>
+                <td></td>
+                <td></td>
+                <td>CPC</td>
+                <td></td>
+                <td>Failed Assessment</td>
+                <td></td>
+                <td>Hewlett Packard, State of Colorado, Bridge Healthcare Partners, Swedish Medical Center, Mental
+                    Health Corporation of Denver, Alcott Center Outpatient Clinic</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Collier</td>
+                <td>a.delancy@yahoo.com</td>
+                <td>772-834-5336</td>
+                <td>FL</td>
+                <td>RHIA</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>Health South Rehab. Hospital od Altamonte Springs, Health South Rehab. Hospital at Martin Health,
+                    Health South Treasure Coast Rehab. Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Walters</td>
+                <td>a.osborne1984@yahoo.com</td>
+                <td>417-499-9992</td>
+                <td>MO</td>
+                <td>CPC</td>
+                <td></td>
+                <td>Failed Assessment</td>
+                <td></td>
+                <td>Mercy Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Amanda</td>
+                <td>Selden</td>
+                <td>a.seldencpc@gmail.com</td>
+                <td>804-731-7081</td>
+                <td>VA</td>
+                <td>CPC</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>HCA Physicians - Tri City Surgical Assoc.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Amber</td>
+                <td>Shadow</td>
+                <td>a.shadeaux@yahoo.com</td>
+                <td>(936) 564-4918</td>
+                <td>TX</td>
+                <td>CCS</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>Nacogdoches Memeorial Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Jessica</td>
+                <td>Lancaster</td>
+                <td>a23mouse@yahoo.com</td>
+                <td></td>
+                <td></td>
+                <td>CPC</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>Medsave, Richard Hoefelmann, M.D., TX. Family Medical</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Angeli</td>
+                <td>Abbey</td>
+                <td>aabbey@kiwi-tek.com</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Alcira</td>
+                <td>Aguilera</td>
+                <td>AAguilera@kiwi-tek.com</td>
+                <td>704-267-4673</td>
+                <td>NC</td>
+                <td>RHIT, CCS</td>
+                <td>ER, Diagnostic</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td></td>
+                <td>2018-07-10</td>
+            </tr>
+            <tr>
+                <td>Alexis</td>
+                <td>Allen</td>
+                <td>AAllen@kiwi-tek.com</td>
+                <td>(901) 730-1798</td>
+                <td>TN</td>
+                <td>CCA</td>
+                <td>Diagnostic, ER, SDS</td>
+                <td>Quit</td>
+                <td>1099</td>
+                <td>United Audit Solutions, The Regional Medical Center</td>
+                <td>2014-02-07</td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Maust</td>
+                <td>aam51411@gmail.com</td>
+                <td>(704) 219-5309</td>
+                <td>AR</td>
+                <td>RHIA</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>Regional Medical Center at Memphis, Stanley Regional Medical Center</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Adaugo</td>
+                <td>Amuta</td>
+                <td>AAmuta@kiwi-tek.com</td>
+                <td>(832) 771-4599</td>
+                <td>TX</td>
+                <td>CPC</td>
+                <td>ER, Diagnostic, Professional Fee</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td>Spi Healthcare, Kaiser Permanente, MedAssurant, LGGO Diagnostic Clinic, Parkview Hospital, Peak
+                    HSUCSD</td>
+                <td>2014-02-09</td>
+            </tr>
+            <tr>
+                <td>Angeli</td>
+                <td>Abbey</td>
+                <td>AAngeli@kiwi-tek.com</td>
+                <td>808-428-6587</td>
+                <td></td>
+                <td>CPC, COC, CPMA, CCS</td>
+                <td>Diagnostic</td>
+                <td>Terminated</td>
+                <td></td>
+                <td>Case Mix Analysis, Hawaii Pacific Health</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Andrea</td>
+                <td>Thomas</td>
+                <td>aaoathomas@yahoo.com</td>
+                <td></td>
+                <td>OH</td>
+                <td>RHIT</td>
+                <td>Diagnostic, SDS</td>
+                <td>Quit</td>
+                <td></td>
+                <td>Healthcare Management Solutions, Cymetrix, Fostoria Community Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ale'a</td>
+                <td>Arce</td>
+                <td>AArce@kiwi-tek.com</td>
+                <td>808-658-0887</td>
+                <td>HI</td>
+                <td>CPC</td>
+                <td>Diagnostic</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td>Molokai General Hospital</td>
+                <td>2018-07-09</td>
+            </tr>
+            <tr>
+                <td>Amy</td>
+                <td>Archuleta</td>
+                <td>AArchuleta@kiwi-tek.com</td>
+                <td>301-335-8283</td>
+                <td>CO</td>
+                <td>CPC</td>
+                <td>Professional Fee</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td>Primary Care &amp; Chiropractic, Healthmark Center</td>
+                <td>2020-01-15</td>
+            </tr>
+            <tr>
+                <td>Aavati</td>
+                <td>Angaraju</td>
+                <td>AavatiAngaraju11395@kiwi-tek.com</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>International - Active</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Alyshia</td>
+                <td>Baker</td>
+                <td>ABaker@kiwi-tek.com</td>
+                <td>615-627-6376</td>
+                <td>TN</td>
+                <td>CPC, CPMA</td>
+                <td>Professional Fee</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td>DHHS - Indian Health Service</td>
+                <td>2017-08-14</td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Alwell</td>
+                <td>abardh1392@gmail.com</td>
+                <td>(601) 686-3871</td>
+                <td>MS</td>
+                <td>RHIT</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>Anderson's Regional Medical Center</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Amy</td>
+                <td>Nunn</td>
+                <td>abass013@yahoo.com</td>
+                <td>(270) 246-1767</td>
+                <td>KY</td>
+                <td>RHIT</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>T. J. Samson Community Hospital, American Rehabilitation, Medical Center at Bowling Green, Medical
+                    Associates of Southern Kentucky</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>George</td>
+                <td>Beckford</td>
+                <td>ABeckf6083@aol.com</td>
+                <td>352-242-2195</td>
+                <td>FL</td>
+                <td>RHIT</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>Health Record Services, Phoenix Children's Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Abigale</td>
+                <td>Miller</td>
+                <td>AbigaleMiller10674@kiwi-tek.com</td>
+                <td></td>
+                <td>GA</td>
+                <td>CCS, CPC</td>
+                <td>ER, Diagnostic, Inpatient Coder, SDS</td>
+                <td>Quit</td>
+                <td>1099</td>
+                <td>St Joseph Georgia, Athens Vascular Surgery</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Amy</td>
+                <td>Black</td>
+                <td>ABlack@kiwi-tek.com</td>
+                <td>804-894-1717</td>
+                <td>VA</td>
+                <td>CPC</td>
+                <td>ER, Diagnostic, SDS</td>
+                <td>Active</td>
+                <td></td>
+                <td>Allyalign Health</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Oxendine</td>
+                <td>aboxendine@gmail.com</td>
+                <td>252-813-8733</td>
+                <td>NC</td>
+                <td>RHIT</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>Cooper Thomas, Healthcare Resolution Services</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Abraham</td>
+                <td>Joy</td>
+                <td>abrahamjoy51@gmail.com</td>
+                <td></td>
+                <td></td>
+                <td>CCS</td>
+                <td></td>
+                <td>Applicant - No Response</td>
+                <td></td>
+                <td>Delano Regional Medical Center, Kern Medical Center</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Alyssa</td>
+                <td>Briscoe</td>
+                <td>abriscoe8910@gmail.com</td>
+                <td>801-717-5662</td>
+                <td></td>
+                <td>CPC</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>UNI, Loveless Coding</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Alaysia</td>
+                <td>Brode</td>
+                <td>ABrode@kiwi-tek.com</td>
+                <td>717-683-4703</td>
+                <td>PA</td>
+                <td>COBGC, CPC, COC</td>
+                <td>Professional Fee</td>
+                <td>Quit</td>
+                <td>1099</td>
+                <td>WellSpan Health</td>
+                <td>2020-12-22</td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Brooks</td>
+                <td>ABrooks@kiwi-tek.com</td>
+                <td>270-366-1912</td>
+                <td>KY</td>
+                <td>CPC</td>
+                <td>ER, Diagnostic</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td>Baptist Health Medical Group</td>
+                <td>2019-01-22</td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Brown</td>
+                <td>ABrown@kiwi-tek.com</td>
+                <td>(304) 707-8545</td>
+                <td>OH</td>
+                <td>RHIT</td>
+                <td>Diagnostic, ER, Inpatient Coder, Outpatient Coder, SDS</td>
+                <td>Active</td>
+                <td>W-2 Employee</td>
+                <td>Cleveland Clinic, Saint Francis Hospital</td>
+                <td>2014-02-03</td>
+            </tr>
+            <tr>
+                <td>Brooke</td>
+                <td>Ziegler</td>
+                <td>abziegler07@yahoo.com</td>
+                <td>812-881-7469</td>
+                <td>IN</td>
+                <td>RHIT</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>Good Samaritan Hospital</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Anna</td>
+                <td>Carr</td>
+                <td>ACarr@kiwi-tek.com</td>
+                <td>812-899-0094</td>
+                <td>IN</td>
+                <td>RHIT</td>
+                <td>ER, Diagnostic, Professional Fee</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td>Good Samaritan Hospital</td>
+                <td>2021-05-09</td>
+            </tr>
+            <tr>
+                <td>Ana</td>
+                <td>Castillo</td>
+                <td>ACastillo@kiwi-tek.com</td>
+                <td>305-595-8792</td>
+                <td>FL</td>
+                <td>CCS</td>
+                <td>ER, Diagnostic, Inpatient Coder</td>
+                <td>Quit</td>
+                <td>1099</td>
+                <td>MModal, Cecil Abraham, DDS</td>
+                <td>2015-09-08</td>
+            </tr>
+            <tr>
+                <td>Angela</td>
+                <td>Bledsoe</td>
+                <td>acbledsoe@rocketmail.com</td>
+                <td>616-204-7431</td>
+                <td>MI</td>
+                <td>RHIT</td>
+                <td></td>
+                <td>Applicant</td>
+                <td></td>
+                <td>Spectrum Health Helen Devos Child. Hosp.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Andrea</td>
+                <td>Chapman</td>
+                <td>AChapman@kiwi-tek.com</td>
+                <td>(419) 215-3624</td>
+                <td>OH</td>
+                <td>RHIT</td>
+                <td>Diagnostic, SDS</td>
+                <td>Quit</td>
+                <td></td>
+                <td>Cleveland Clinic, Owens community College, Toledo Hospital, Hospice of Northwest OH</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Agnes</td>
+                <td>Chilinski</td>
+                <td>achilinski11@gmail.com</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Failed Assessment</td>
+                <td></td>
+                <td>Professional Practice Experience</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ashley</td>
+                <td>Chuke</td>
+                <td>AChuke@kiwi-tek.com</td>
+                <td>281-904-4487</td>
+                <td>TX</td>
+                <td>CPC</td>
+                <td>ER, Diagnostic</td>
+                <td>Active</td>
+                <td>1099</td>
+                <td>Santa Cllara Valley Medical Center, University of San Diego, Children's Mercy Hospital</td>
+                <td>2018-07-29</td>
+            </tr>
+            <tr>
+                <td>Adaliz</td>
+                <td>Cirino</td>
+                <td>ACirino@kiwi-tek.com</td>
+                <td>407-393-7303</td>
+                <td>FL</td>
+                <td>CPC-H, COC</td>
+                <td>Professional Fee</td>
+                <td>Quit</td>
+                <td>1099</td>
+                <td>Optum Healthcare, Managed Resources</td>
+                <td>2021-03-19</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>State</th>
+                <th>Credentials</th>
+                <th>Patient Types</th>
+                <th>Status</th>
+                <th>Classification</th>
+                <th>Clients</th>
+                <th>Hire Date</th>
+            </tr>
+
+        </tfoot>
+
+    </table>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src=" https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $('#searchtable tfoot th').each(function () {
+                console.log("hy");
+                var title = $(this).text();
+                $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+            });
+            $('#searchtable').DataTable(
+
+                {
+
+                    dom: 'Bfrtip',
+                    pageLength: 30,
+                    buttons: [
+                        'copy', 'csv', 'excel', 'pdf', 'print'
+                    ],
+                    initComplete: function () {
+                        // Apply the search
+                        this.api()
+                            .columns()
+                            .every(function () {
+                                var that = this;
+
+                                $('input', this.footer()).on('keyup change clear', function () {
+                                    if (that.search() !== this.value) {
+                                        that.search(this.value).draw();
+                                    }
+                                });
+                            });
+                    },
+
+                }
+
+
+            );
+
+        });
+    </script>
+
 </body>
+
 </html>
